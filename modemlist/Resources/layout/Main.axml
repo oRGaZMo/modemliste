@@ -1,14 +1,377 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    >
-<Button  
-    android:id="@+id/myButton"
-    android:layout_width="match_parent" 
-    android:layout_height="wrap_content" 
-    android:text="@string/hello"
-    />
+<LinearLayout xmlns:p1="http://schemas.android.com/apk/res/android"
+    p1:orientation="horizontal"
+    p1:layout_width="match_parent"
+    p1:layout_height="match_parent"
+    p1:id="@+id/linearLayout1">
+    <LinearLayout
+        p1:orientation="vertical"
+        p1:layout_width="80dp"
+        p1:layout_height="match_parent"
+        p1:id="@+id/linearLayout2"
+        p1:weightSum="100"
+        p1:background="#ff000000"
+        p1:layout_marginRight="10dp">
+        <LinearLayout
+            p1:orientation="vertical"
+            p1:minWidth="25px"
+            p1:minHeight="25px"
+            p1:layout_width="match_parent"
+            p1:layout_height="wrap_content"
+            p1:id="@+id/linearLayout3"
+            p1:layout_weight="25"
+            p1:gravity="center_vertical">
+            <Button
+                p1:text="Table"
+                p1:layout_width="match_parent"
+                p1:layout_height="wrap_content"
+                p1:id="@+id/button1"
+                p1:textStyle="bold"
+                p1:textColor="#ffffffff" />
+        </LinearLayout>
+        <LinearLayout
+            p1:orientation="vertical"
+            p1:minWidth="25px"
+            p1:minHeight="25px"
+            p1:layout_width="match_parent"
+            p1:layout_height="wrap_content"
+            p1:id="@+id/linearLayout4"
+            p1:layout_weight="25"
+            p1:gravity="center_vertical">
+            <Button
+                p1:text="Log"
+                p1:layout_width="match_parent"
+                p1:layout_height="wrap_content"
+                p1:id="@+id/button2"
+                p1:textColor="#ffffffff"
+                p1:textStyle="bold" />
+        </LinearLayout>
+        <LinearLayout
+            p1:orientation="vertical"
+            p1:minWidth="25px"
+            p1:minHeight="25px"
+            p1:layout_width="match_parent"
+            p1:layout_height="wrap_content"
+            p1:id="@+id/linearLayout5"
+            p1:layout_weight="25"
+            p1:gravity="center_vertical">
+            <Button
+                p1:text="Send"
+                p1:layout_width="match_parent"
+                p1:layout_height="wrap_content"
+                p1:id="@+id/button3"
+                p1:textStyle="bold"
+                p1:textColor="#ffffffff" />
+        </LinearLayout>
+        <LinearLayout
+            p1:orientation="vertical"
+            p1:minWidth="25px"
+            p1:minHeight="25px"
+            p1:layout_width="match_parent"
+            p1:layout_height="wrap_content"
+            p1:id="@+id/linearLayout6"
+            p1:layout_weight="25"
+            p1:gravity="center_vertical">
+            <Button
+                p1:text="Setup"
+                p1:layout_width="match_parent"
+                p1:layout_height="wrap_content"
+                p1:id="@+id/button4"
+                p1:textStyle="bold"
+                p1:textColor="#FFFFFF" />
+        </LinearLayout>
+    </LinearLayout>
+    <TableLayout
+        p1:minWidth="25px"
+        p1:minHeight="25px"
+        p1:layout_width="match_parent"
+        p1:layout_height="match_parent"
+        p1:id="@+id/tableLayout1"
+        p1:weightSum="100"
+        p1:orientation="vertical">
+        <TableRow
+            p1:id="@+id/tableRow1"
+            p1:orientation="horizontal"
+            p1:layout_weight="10"
+            p1:gravity="center">
+            <TextView
+                p1:textAppearance="?android:attr/textAppearanceMedium"
+                p1:layout_column="0"
+                p1:id="@+id/textView28"
+                p1:layout_height="match_parent"
+                p1:gravity="center"
+                p1:layout_marginLeft="20dp"
+                p1:layout_marginRight="20dp" />
+            <TextView
+                p1:text="Fahrzeug"
+                p1:textAppearance="?android:attr/textAppearanceLarge"
+                p1:layout_column="1"
+                p1:id="@+id/textView25"
+                p1:gravity="center_horizontal"
+                p1:textStyle="bold"
+                p1:layout_marginRight="20dp"
+                p1:layout_width="220dp"
+                p1:layout_height="match_parent" />
+            <TextView
+                p1:text="Verbrauch SK"
+                p1:textAppearance="?android:attr/textAppearanceLarge"
+                p1:layout_column="2"
+                p1:id="@+id/textView26"
+                p1:gravity="center_horizontal"
+                p1:textStyle="bold"
+                p1:layout_marginLeft="20dp"
+                p1:layout_marginRight="20dp"
+                p1:layout_width="220dp"
+                p1:layout_height="match_parent" />
+            <TextView
+                p1:text="Verbrauch BI"
+                p1:textAppearance="?android:attr/textAppearanceLarge"
+                p1:layout_column="3"
+                p1:id="@+id/textView27"
+                p1:gravity="center_horizontal"
+                p1:textStyle="bold"
+                p1:layout_width="220dp"
+                p1:layout_marginLeft="20dp"
+                p1:layout_height="match_parent" />
+        </TableRow>
+        <TableRow
+            p1:id="@+id/tableRow2"
+            p1:layout_weight="15"
+            p1:gravity="center">
+            <TextView
+                p1:text="D 2"
+                p1:textAppearance="?android:attr/textAppearanceLarge"
+                p1:layout_column="0"
+                p1:id="@+id/textView21"
+                p1:gravity="center"
+                p1:textStyle="bold"
+                p1:layout_height="match_parent" />
+            <Button
+                p1:text="0"
+                p1:layout_column="1"
+                p1:id="@+id/button10"
+                p1:layout_height="match_parent"
+                p1:layout_marginRight="20dp"
+                p1:typeface="normal"
+                p1:textSize="50dp"
+                p1:textStyle="bold"
+                p1:layout_width="220dp" />
+            <Button
+                p1:text="0"
+                p1:layout_column="2"
+                p1:id="@+id/button11"
+                p1:layout_height="match_parent"
+                p1:layout_marginLeft="20dp"
+                p1:layout_marginRight="20dp"
+                p1:typeface="normal"
+                p1:textSize="50dp"
+                p1:textStyle="bold"
+                p1:layout_width="220dp" />
+            <Button
+                p1:text="0"
+                p1:layout_column="3"
+                p1:id="@+id/button12"
+                p1:layout_height="match_parent"
+                p1:typeface="normal"
+                p1:textSize="50dp"
+                p1:textStyle="bold"
+                p1:layout_marginLeft="20dp"
+                p1:layout_width="220dp" />
+        </TableRow>
+        <TableRow
+            p1:id="@+id/tableRow3"
+            p1:layout_weight="15"
+            p1:gravity="center">
+            <TextView
+                p1:text="D 3"
+                p1:textAppearance="?android:attr/textAppearanceLarge"
+                p1:layout_column="0"
+                p1:id="@+id/textView22"
+                p1:gravity="center"
+                p1:textStyle="bold"
+                p1:layout_height="match_parent" />
+            <Button
+                p1:text="0"
+                p1:layout_column="1"
+                p1:id="@+id/button20"
+                p1:layout_height="match_parent"
+                p1:layout_marginRight="20dp"
+                p1:typeface="normal"
+                p1:textSize="50dp"
+                p1:textStyle="bold"
+                p1:layout_width="220dp" />
+            <Button
+                p1:text="0"
+                p1:layout_column="2"
+                p1:id="@+id/button21"
+                p1:layout_height="match_parent"
+                p1:layout_marginLeft="20dp"
+                p1:layout_marginRight="20dp"
+                p1:typeface="normal"
+                p1:textSize="50dp"
+                p1:textStyle="bold"
+                p1:layout_width="220dp" />
+            <Button
+                p1:text="0"
+                p1:layout_column="3"
+                p1:id="@+id/button22"
+                p1:layout_height="match_parent"
+                p1:layout_marginLeft="20dp"
+                p1:typeface="normal"
+                p1:textSize="50dp"
+                p1:textStyle="bold"
+                p1:layout_width="220dp" />
+        </TableRow>
+        <TableRow
+            p1:id="@+id/tableRow4"
+            p1:layout_weight="15"
+            p1:gravity="center">
+            <TextView
+                p1:text="HB2"
+                p1:textAppearance="?android:attr/textAppearanceLarge"
+                p1:layout_column="0"
+                p1:id="@+id/textView23"
+                p1:gravity="center"
+                p1:textStyle="bold"
+                p1:layout_height="match_parent" />
+            <Button
+                p1:text="0"
+                p1:layout_column="1"
+                p1:id="@+id/button30"
+                p1:layout_height="match_parent"
+                p1:layout_marginRight="20dp"
+                p1:typeface="normal"
+                p1:textSize="50dp"
+                p1:textStyle="bold"
+                p1:layout_width="220dp" />
+            <Button
+                p1:text="0"
+                p1:layout_column="2"
+                p1:id="@+id/button31"
+                p1:layout_height="match_parent"
+                p1:layout_marginLeft="20dp"
+                p1:layout_marginRight="20dp"
+                p1:typeface="normal"
+                p1:textSize="50dp"
+                p1:textStyle="bold"
+                p1:layout_width="220dp" />
+            <Button
+                p1:text="0"
+                p1:layout_column="3"
+                p1:id="@+id/button32"
+                p1:layout_height="match_parent"
+                p1:layout_marginLeft="20dp"
+                p1:typeface="normal"
+                p1:textSize="50dp"
+                p1:textStyle="bold"
+                p1:layout_width="220dp" />
+        </TableRow>
+        <TableRow
+            p1:id="@+id/tableRow5"
+            p1:layout_weight="15"
+            p1:gravity="center">
+            <TextView
+                p1:text="HB3"
+                p1:textAppearance="?android:attr/textAppearanceLarge"
+                p1:layout_column="0"
+                p1:id="@+id/textView24"
+                p1:gravity="center"
+                p1:textStyle="bold"
+                p1:layout_height="match_parent" />
+            <Button
+                p1:text="0"
+                p1:layout_column="1"
+                p1:id="@+id/button40"
+                p1:layout_height="match_parent"
+                p1:layout_marginRight="20dp"
+                p1:textSize="50dp"
+                p1:typeface="normal"
+                p1:textStyle="bold"
+                p1:layout_width="220dp" />
+            <Button
+                p1:text="0"
+                p1:layout_column="2"
+                p1:id="@+id/button41"
+                p1:layout_height="match_parent"
+                p1:layout_marginLeft="20dp"
+                p1:layout_marginRight="20dp"
+                p1:textSize="50dp"
+                p1:typeface="normal"
+                p1:textStyle="bold"
+                p1:layout_width="200dp" />
+            <Button
+                p1:text="0"
+                p1:layout_column="3"
+                p1:id="@+id/button42"
+                p1:layout_height="match_parent"
+                p1:layout_marginLeft="20dp"
+                p1:textSize="50dp"
+                p1:typeface="normal"
+                p1:textStyle="bold"
+                p1:layout_width="200dp" />
+        </TableRow>
+        <TableRow
+            p1:id="@+id/tableRow5"
+            p1:layout_weight="15"
+            p1:gravity="center"
+            p1:layout_marginTop="30dp">
+            <TextView
+                p1:textAppearance="?android:attr/textAppearanceMedium"
+                p1:layout_column="0"
+                p1:id="@+id/textView35"
+                p1:layout_height="match_parent"
+                p1:layout_marginTop="10dp"
+                p1:layout_marginBottom="10dp"
+                p1:layout_width="100dp"
+                p1:minWidth="50dp"
+                p1:gravity="center_horizontal" />
+            <Button
+                p1:text="0"
+                p1:layout_column="1"
+                p1:id="@+id/button50"
+                p1:layout_height="match_parent"
+                p1:layout_marginRight="20dp"
+                p1:textSize="50dp"
+                p1:typeface="normal"
+                p1:textStyle="bold"
+                p1:layout_width="220dp" />
+            <LinearLayout
+                p1:orientation="vertical"
+                p1:layout_column="2"
+                p1:id="@+id/linearLayout7"
+                p1:layout_height="match_parent"
+                p1:layout_marginRight="20dp"
+                p1:layout_marginLeft="20dp"
+                p1:layout_marginTop="10dp"
+                p1:layout_marginBottom="10dp">
+                <TextView
+                    p1:text="20-69 --&gt;"
+                    p1:textAppearance="?android:attr/textAppearanceLarge"
+                    p1:layout_width="wrap_content"
+                    p1:layout_height="wrap_content"
+                    p1:id="@+id/textView31"
+                    p1:gravity="right"
+                    p1:layout_gravity="right"
+                    p1:textStyle="bold" />
+                <TextView
+                    p1:textAppearance="?android:attr/textAppearanceLarge"
+                    p1:layout_width="wrap_content"
+                    p1:layout_height="wrap_content"
+                    p1:id="@+id/textView30"
+                    p1:gravity="left"
+                    p1:text="&lt;-- 13-69"
+                    p1:textStyle="bold" />
+            </LinearLayout>
+            <Button
+                p1:text="0"
+                p1:layout_column="3"
+                p1:id="@+id/button51"
+                p1:layout_height="match_parent"
+                p1:layout_marginLeft="20dp"
+                p1:textSize="50dp"
+                p1:typeface="normal"
+                p1:textStyle="bold"
+                p1:layout_width="200dp" />
+        </TableRow>
+    </TableLayout>
 </LinearLayout>
-

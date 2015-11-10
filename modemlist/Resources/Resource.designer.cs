@@ -60,8 +60,131 @@ namespace modemlist
 		public partial class Id
 		{
 			
+			// aapt resource value: 0x7f050003
+			public const int button1 = 2131034115;
+			
+			// aapt resource value: 0x7f050012
+			public const int button10 = 2131034130;
+			
+			// aapt resource value: 0x7f050013
+			public const int button11 = 2131034131;
+			
+			// aapt resource value: 0x7f050014
+			public const int button12 = 2131034132;
+			
+			// aapt resource value: 0x7f050005
+			public const int button2 = 2131034117;
+			
+			// aapt resource value: 0x7f050017
+			public const int button20 = 2131034135;
+			
+			// aapt resource value: 0x7f050018
+			public const int button21 = 2131034136;
+			
+			// aapt resource value: 0x7f050019
+			public const int button22 = 2131034137;
+			
+			// aapt resource value: 0x7f050007
+			public const int button3 = 2131034119;
+			
+			// aapt resource value: 0x7f05001c
+			public const int button30 = 2131034140;
+			
+			// aapt resource value: 0x7f05001d
+			public const int button31 = 2131034141;
+			
+			// aapt resource value: 0x7f05001e
+			public const int button32 = 2131034142;
+			
+			// aapt resource value: 0x7f050009
+			public const int button4 = 2131034121;
+			
+			// aapt resource value: 0x7f050021
+			public const int button40 = 2131034145;
+			
+			// aapt resource value: 0x7f050022
+			public const int button41 = 2131034146;
+			
+			// aapt resource value: 0x7f050023
+			public const int button42 = 2131034147;
+			
+			// aapt resource value: 0x7f050025
+			public const int button50 = 2131034149;
+			
+			// aapt resource value: 0x7f050029
+			public const int button51 = 2131034153;
+			
 			// aapt resource value: 0x7f050000
-			public const int myButton = 2131034112;
+			public const int linearLayout1 = 2131034112;
+			
+			// aapt resource value: 0x7f050001
+			public const int linearLayout2 = 2131034113;
+			
+			// aapt resource value: 0x7f050002
+			public const int linearLayout3 = 2131034114;
+			
+			// aapt resource value: 0x7f050004
+			public const int linearLayout4 = 2131034116;
+			
+			// aapt resource value: 0x7f050006
+			public const int linearLayout5 = 2131034118;
+			
+			// aapt resource value: 0x7f050008
+			public const int linearLayout6 = 2131034120;
+			
+			// aapt resource value: 0x7f050026
+			public const int linearLayout7 = 2131034150;
+			
+			// aapt resource value: 0x7f05000a
+			public const int tableLayout1 = 2131034122;
+			
+			// aapt resource value: 0x7f05000b
+			public const int tableRow1 = 2131034123;
+			
+			// aapt resource value: 0x7f050010
+			public const int tableRow2 = 2131034128;
+			
+			// aapt resource value: 0x7f050015
+			public const int tableRow3 = 2131034133;
+			
+			// aapt resource value: 0x7f05001a
+			public const int tableRow4 = 2131034138;
+			
+			// aapt resource value: 0x7f05001f
+			public const int tableRow5 = 2131034143;
+			
+			// aapt resource value: 0x7f050011
+			public const int textView21 = 2131034129;
+			
+			// aapt resource value: 0x7f050016
+			public const int textView22 = 2131034134;
+			
+			// aapt resource value: 0x7f05001b
+			public const int textView23 = 2131034139;
+			
+			// aapt resource value: 0x7f050020
+			public const int textView24 = 2131034144;
+			
+			// aapt resource value: 0x7f05000d
+			public const int textView25 = 2131034125;
+			
+			// aapt resource value: 0x7f05000e
+			public const int textView26 = 2131034126;
+			
+			// aapt resource value: 0x7f05000f
+			public const int textView27 = 2131034127;
+			
+			// aapt resource value: 0x7f05000c
+			public const int textView28 = 2131034124;
+			
+			// aapt resource value: 0x7f050028
+			public const int textView30 = 2131034152;
+			
+			// aapt resource value: 0x7f050027
+			public const int textView31 = 2131034151;
+			
+			// aapt resource value: 0x7f050024
+			public const int textView35 = 2131034148;
 			
 			static Id()
 			{
@@ -77,7 +200,10 @@ namespace modemlist
 		{
 			
 			// aapt resource value: 0x7f030000
-			public const int Main = 2130903040;
+			public const int CustomActionBar = 2130903040;
+			
+			// aapt resource value: 0x7f030001
+			public const int Main = 2130903041;
 			
 			static Layout()
 			{
