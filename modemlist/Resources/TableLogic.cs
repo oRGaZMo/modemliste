@@ -8,6 +8,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using Android.Net;
 
 
 namespace modemlist
@@ -28,9 +29,10 @@ namespace modemlist
 	 *
 	 */		//they are everywhere
 
-		public class TableLogic
+	public class TableLogic:MainActivity
 		{
-
+			public LinearLayout LL{ get; set; }
+			public TableLayout TL{ get; set; }
 			D2 d2;
 			D3 d3;
 			HB2 hb2;
@@ -148,7 +150,7 @@ namespace modemlist
 			#endregion
 
 			// Liste aller buttons generieren und zu EVENTS ANMELDEN
-			public void blistErstellen()   
+			public void CreateButtonList()   
 			{
 				blist = new List<Button> ();
 				blist.Add (button1);
@@ -316,8 +318,10 @@ namespace modemlist
 				ButtonValuesRefresh ();
 			}
 
-			// Changes in den Modemklassen auf UI anzeigen (Buttonvalues aktualisieren)
-
+			 
+			/// <summary>
+			/// Changes in den Modemklassen auf UI anzeigen (Buttonvalues aktualisieren)
+			/// </summary>
 			public void ButtonValuesRefresh()
 			{			
 				button10.Text = d2.Fahrzeug.ToString();
@@ -356,6 +360,7 @@ namespace modemlist
 			}
 		}
 }
+
 
 
 	/*

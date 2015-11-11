@@ -9,7 +9,7 @@ using Android.OS;
 
 namespace modemlist
 {
-	[Activity (Label = "modemlist", MainLauncher = true, Icon = "@drawable/icon")]
+	[Activity (Label = "modemlist",ConfigurationChanges=Android.Content.PM.ConfigChanges.Orientation|Android.Content.PM.ConfigChanges.ScreenSize, MainLauncher = true, Icon = "@drawable/icon")]
 	public class MainActivity : Activity
 	{
 		TableLogic RI;
@@ -24,6 +24,7 @@ namespace modemlist
 		
 			SetContentView (Resource.Layout.Main);
 
+			ActionBar.Hide();
 			ActionBar.SetCustomView (Resource.Layout.CustomActionBar);
 			ActionBar.SetDisplayShowCustomEnabled (true);
 
@@ -49,9 +50,57 @@ namespace modemlist
 			RI.button51= FindViewById<Button> (Resource.Id.button51);
 			#endregion
 
-			RI.blistErstellen ();
+			RI.LL = FindViewById<LinearLayout> (Resource.Id.linearLayout2);
+			RI.TL = FindViewById<TableLayout> (Resource.Id.tableLayout1);
+
+			RI.CreateButtonList ();
 			RI.ModemsInstanzieren ();
+
+			RI.button2.Click += ScreenshotTest;
 		}
+
+		void ScreenshotTest(object sender,EventArgs EventArgs)
+		{
+			Android.Graphics.Bitmap b = Android.Graphics.Bitmap.CreateBitmap(RI.TL.Width,RI.TL.Height,Android.Graphics.Bitmap.Config.Argb8888);
+			Android.Graphics.Canvas c = new Android.Graphics.Canvas (b);
+			c.DrawColor (Android.Graphics.Color.White);
+			RI.TL.Draw(c);
+
+			using (System.IO.FileStream fs = new System.IO.FileStream (
+				"/sdcard/screen.png", System.IO.FileMode.Create)) {
+				b.Compress (Android.Graphics.Bitmap.CompressFormat.Png, 90, fs);}
+			
+			var uri = Android.Net.Uri.FromFile (new Java.IO.File("/sdcard/screen.png"));
+			var email = new Intent (Android.Content.Intent.ActionSend);
+			email.SetType ("message/rfc822");
+			email.PutExtra (Android.Content.Intent.ExtraEmail, new string[]{"person1@xamarin.com"} );
+			email.PutExtra (Android.Content.Intent.ExtraCc,	new string[]{"person3@xamarin.com"} );
+			email.PutExtra (Android.Content.Intent.ExtraSubject, "[ModemListe]");
+			email.PutExtra (Android.Content.Intent.ExtraText, "Hello from Xamarin.Android");	
+			email.PutExtra (Intent.ExtraStream,uri);
+			StartActivity (Intent.CreateChooser(email,"send"));
+
+		}
+		public override void OnContentChanged ()
+		{
+			base.OnContentChanged ();
+			RequestedOrientation=Android.Content.PM.ScreenOrientation.Landscape;
+			RequestedOrientation=Android.Content.PM.ScreenOrientation.Locked;
+		}
+
+
+		protected override void OnResume ()
+		{
+			base.OnResume ();
+			RequestedOrientation=Android.Content.PM.ScreenOrientation.Landscape;
+			RequestedOrientation=Android.Content.PM.ScreenOrientation.Locked;
+			try {
+				RI.ButtonValuesRefresh();} 
+			catch (Exception ex) {
+				Console.Write (ex.StackTrace);}
+		}
+
+
 	}
 }
 

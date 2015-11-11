@@ -56,10 +56,9 @@ namespace modemlist
 				}
 			}catch(Exception e){Console.Write (e.StackTrace);}
 
-
-
-
 		}
+
+
 		//=========================================// READ OUT //========================================//
 
 		//Buttonvalues als int array aus dem permanenten speicher ausgeben;
